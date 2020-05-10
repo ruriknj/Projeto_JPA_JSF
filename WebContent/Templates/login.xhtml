@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:dialog header="Login" modal="true" visible="true">
+			<p:panelGrid columns="2">
+				<p:outputLabel value="Usuario: " />
+				<p:inputText value="#{LoginBean.usuarioAdm}" />
+				<p:outputLabel value="Senha: " />
+				<p:password value="#{LoginBean.senhaAdm}" />
+				<p:commandButton value="Entrar" update="@form" 
+					actionListener="#{LoginBean.entrar}"/>
+				<p:commandButton value="Criar" onclick="PF('criarUsuario').show();"  />
+			</p:panelGrid>
+		</p:dialog>
+		
+		<!-- dialog de criar usuario -->
+		<p:dialog header="Criar Usuario" modal="true" 
+			visible="false" widgetVar="criarUsuario">
+			<p:panelGrid columns="2">
+				<p:outputLabel value="Nome: " />
+				<p:inputText value="#{LoginBean.cadastro.nome}" />
+				<p:outputLabel value="Usuario: " />
+				<p:inputText value="#{LoginBean.cadastro.usuario}" />
+				<p:outputLabel value="Senha: " />
+				<p:password value="#{LoginBean.cadastro.senha}" />
+				<p:commandButton value="Salvar" update="@form" 
+					actionListener="#{LoginBean.salvar}"/>
+			</p:panelGrid>
+		</p:dialog>
+	</h:form>
+</h:body>
+</html>

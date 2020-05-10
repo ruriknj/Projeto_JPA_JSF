@@ -1,0 +1,50 @@
+<!DOCTYPE	html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:metadata charset="utf-8" />
+
+	<title>Projeto VaiJava</title>
+</h:head>
+
+<link rel="stylesheet" type="text/css"
+	href="#{request.contextPath}/resources/componentes/css/main1.css" />
+<h:body>
+	<div
+		style="width: 100%; font-size: 36px; line-height: 48px; background-color: navy; color: white">Meu
+		Template</div>
+
+	<h1>Login VaiJava</h1>
+	<hr />
+	<h:form>
+		<p:menubar label="Ajax">
+			<p:menuitem value="Login" url="login.xhtml"></p:menuitem>
+			<p:menuitem value="Calculadora" url="calculadora.xhtml"></p:menuitem>
+			<p:menuitem value="Fechar" onclick="closeDialog();" 
+					immediate="true" icon="ui-icon-close" />
+		</p:menubar>
+		<SCRIPT type="text/javascript">
+   					 function closeDialog(){window.close();}
+    				</SCRIPT>
+	</h:form>
+	<hr />
+
+
+
+
+
+	<ui:insert></ui:insert>
+
+
+
+
+
+
+</h:body>
+</html>
+
+

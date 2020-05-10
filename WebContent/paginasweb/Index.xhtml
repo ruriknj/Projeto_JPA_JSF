@@ -1,0 +1,30 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" template="/Templates/template.xhtml">
+
+
+
+	<p>
+		Compre suas roupas e acessórios na <strong>Mirror Fashion</strong>.
+	</p>
+
+	<h2>Login VaiJava</h2>
+	<hr />
+	<h:outputLabel value="Nome: " for="input-nome"/>
+	<h:inputText id="input-nome"/>
+	<hr />
+	<h:form>
+		<p:menubar >
+			<p:menuitem value="Login" url="login.xhtml"></p:menuitem>
+			<p:menuitem value="Calculadora" url="calculadora.xhtml"></p:menuitem>
+
+		</p:menubar>
+	</h:form>
+
+
+
+
+
+</ui:composition>
